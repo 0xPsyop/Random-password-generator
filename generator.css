@@ -1,86 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-	box-sizing:border-box;
-	padding:0;
-	margin:0;
-    
-}
+/* BASIC ALIGNMENT */
 
-body{
-	background:#000;
-    color:#fff;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-
-.container{
+body {
+	background-image: url(https://cdn.wallpapersafari.com/37/5/mVcIFU.jpg);
+    background-size: cover;
+	display: grid;
+    align-items: center;
+    justify-content: center;
+	height: 100vh;
+    margin: 0px;
+}
+.container {
+	padding: 2rem;
+	background: #000;
+    color: #fff;
 	font-family: 'Poppins', sans-serif;
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-	padding-top:30vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 0.75rem;
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(0.7rem);
 }
 
- h2{
+/* CONTAINER INTERNALS */
+
+h2 {
  	font-size:3rem;
+}
+.description {
+	text-align: center;
+	padding: 1rem;
+}
+.description span {
+	font-style: italic;
+}
 
- }
+/* RESULTS */
 
-.results{
-	font-size:1rem;
-	background:#fff;
-	color:#000;
-	width:20rem;
+.results {
+	display: flex;
+	font-size: 1rem;
+	background: #fff;
+	color: #000;
+	width: 20rem;
 	margin: 1rem;
-	text-align:center;
-	padding-top:0.5rem;
+	text-align: center;
+	align-items: center;
+	padding: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	/* TODO convert padding to shorthand later */
+	justify-content: space-between;
+	/* padding-top: 0.5rem; */
+	border-radius: 5px;
+}
+#clipboard {
+	/* margin-left: 10.5rem; */
+	/* padding: 0.5rem; */
+	font-size: 1.75rem;
+	background-color: white;
+	border: 0px solid;
 }
 
-#clipboard{
-	margin-left:19rem;
+/* SETTING PARAMETERS */
+
+.settings {
+	font-size: 1rem;
+    width: 15rem;
+    border: 1px solid #888;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.setting {
+	line-height: 2.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.checkmark {
+	border-radius: 50%;
+	/* TODO this won't work? */
+}
+#length {
+	width: 2.5rem;
+	height: 1.75rem;
+}
+input { 
+    text-align: center; 
+}
+/* NUMBER INPUT - removes arrows from number input field*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	appearance: none;
+  	-webkit-appearance: none;
+  	margin: 0;
+}
+/* Firefox */
+input[type=number] {
+	appearance: none;
+  	-moz-appearance: textfield;
 }
 
-.settings{
-	font-size:1.5rem;
-    width:20rem;
-    border:1px solid #888;
-    padding:0.5rem;
-    border-radius:5px;
+#lower {
+	margin-left: 1rem;
+}
+#upper {
+	margin-left: 0.8rem;
+}
+#numbers {
+	margin-left: 1.5rem;
+}
+#symbols {
+	margin-left: 1.9rem;
 }
 
-.setting{
-   line-height:2.5rem;
-}
+/* "GENERATE PASSWORD" BUTTON */
 
-#lower{
-	margin-left:1rem;
-}
-
-#upper{
-	margin-left:0.8rem;
-}
-
-#numbers{
-	margin-left:1.5rem;
-}
-
-#symbols{
-	margin-left:1.9rem;
-}
-
-#generate{
-	margin-top:1rem;
+#generate {
+	margin-top: 1rem;
 	font-family: 'Poppins', sans-serif;
-	font-size:1.3rem;
-	padding:1rem;
-	border:1px solid #fff;
-	border-radius:5px;
-	font-weight:700;
-	color:#fff;
-    background:#000;
+	font-size: 1.3rem;
+	padding: 1rem;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	font-weight: 700;
+	color: #fff;
+    background: transparent;
 }
 
-#generate:hover{
-	color:#000;
-    background:#fff;
-    transition-duration:1.5s;
+/* HOVER STATES */
+
+#generate:hover {
+	color: #000;
+    background: #fff;
+    transition-duration: 0.4s;
+	cursor: pointer;
+}
+#clipboard:hover {
+	cursor: pointer;
 }
